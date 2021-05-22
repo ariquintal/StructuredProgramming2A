@@ -1,7 +1,12 @@
-price = int(input("What is the price of the product"))
-tax_rate = int(float(input("What is the tax rate?")))
+print("Start Program")
 
-sale_tax = (price * tax_rate)/100
-total_sale = sale_tax + price
-print ("Tax Sale:$", sale_tax)
-print ("Total:$", total_sale)
+num1 = 0
+num2 = 0
+
+num1 = int(input("Write the first number\n"))
+num2 = int(input("Write the second number\n"))
+division = num1/num2
+
+print("This is the result", division)
+
+print("Ending Program...")
