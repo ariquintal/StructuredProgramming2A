@@ -18,4 +18,3 @@ if __name__ == "__main__":
     ##         0,1,2,3,4
     
     print(my_int, my_str, my_float, my_bool, my_list)
-    
