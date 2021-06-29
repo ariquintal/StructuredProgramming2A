@@ -1,6 +1,26 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 #define pi 3.1416
+
+typedef struct mago{
+    int vida;
+    int mana;
+    char* nombre;
+    //mas atributos//
+    //Say hello
+    void (*Saludo) (char message[]);
+    int (*sumaDosNumeros) (int argumento1, int argumento2);
+
+}Mago;
+
+typedef struct Array
+{
+    int dirArray[2];
+    float aFloat;
+    float * aFloatPointer;
+
+}Array;
+
 
 int libInteger = 24;
 
@@ -18,16 +38,9 @@ int addTwoNumbers( int argumento1, int argumento2){
     return result;
 }
 
-void modifyVariables( int argumento1, int argumento2 ){
-
-    argumento1 = argumento1*2;
-    argumento2 = argumento2*2;
-    return;
-
-}
 
 //paso de argumentos por dirreccion//
-void modifyVariablesAddress(int argumento1, int argumento2){
+void modifyVariables(int argumento1, int argumento2){
     argumento1 = argumento1*2;
     argumento2 = argumento2*2;
     return;
@@ -39,7 +52,7 @@ void ShowIntAdress(int* param){
 }
 
 void ShowIntValueAdress(int* param){
-    printf("value: %i\n", param);
+    printf("value: %ls\n", param);
 
 }
 
@@ -52,4 +65,51 @@ void modifyVariablesAddress( int* dir1, int* dir2, int multiplo){
     *dir2 = *dir2 * multiplo;
 
     return;
+}
+
+void swap(int* ptr1, int*ptr2){
+    int temp = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = temp;
+    return;
+    
+
+
+
+
+}
+
+void fillArray( int array[], size_t tam){
+    for (size_t i = 0; i < tam; i++)
+    {
+        array[i] = i*2;
+    }
+    return;
+};
+
+
+
+void printArray1D( int array[], size_t tam){
+
+for (size_t i = 0; i < tam; i++)
+    {
+        printf("%i\n", array[i]);
+    }
+    return;
+}
+
+Array* returnArray(){
+    //int unArreglo[5] = {1,5,6,7,8};
+    Array* unArrayType = (Array*)malloc(sizeof(Array));
+    printf("addres unArrayType = %p, unArrayType =%p \n", &unArrayType, unArrayType);
+   
+    unArrayType->dirArray[0] = 17;
+    unArrayType->dirArray[1] = 15;
+    //unArrayType->dirArray[1] = 10;
+    return unArrayType;
+}
+
+Array otherFunction(){
+
+
 }
