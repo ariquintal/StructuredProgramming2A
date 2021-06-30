@@ -9,7 +9,7 @@
 int main(int argc, char** argv){
 
 
-    UTILS myStructC = {1, ShowIntAdress,ShowIntValueAdress, modifyVariablesAddress};
+    UTILS myStructC = {1, ShowIntAdress, ShowIntValueAdress, modifyVariablesAddress};
     printf("myInt = %d. &myStructC = %p\n", myStructC.myInt, &myStructC);
     UTILS* myStructP = &myStructC;
 
