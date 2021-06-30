@@ -7,8 +7,10 @@
 
 
 int main(int argc, char** argv){
+
+
     UTILS myStructC = {1, ShowIntAdress};
-    printf("myInt = %d. &myStructC = %p\n", myStructC.myInt);
+    printf("myInt = %d. &myStructC = %p\n", myStructC.myInt, &myStructC);
     UTILS* myStructP = &myStructC;
 
     printf("myInt = %d\n", (*myStructP).myInt);

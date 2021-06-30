@@ -2,16 +2,14 @@
 #include <stdlib.h>
 #define pi 3.1416
 
-typedef struct mago{
-    int vida;
-    int mana;
-    char* nombre;
-    //mas atributos//
-    //Say hello
-    void (*Saludo) (char message[]);
-    int (*sumaDosNumeros) (int argumento1, int argumento2);
+typedef struct utils{
+    int myInt; 
+    void (*ShowIntAdress) (int* param);
+    void (*ShowIntValueAdress) (int param);
+    void (*modifyVariablesAddress) (int dir1, int* dir2, int multiplo );
 
-}Mago;
+
+}UTILS;
 
 typedef struct Array
 {
