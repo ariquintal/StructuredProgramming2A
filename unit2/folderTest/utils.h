@@ -7,7 +7,8 @@ typedef struct utils{
     void (*ShowIntAdress) (int* param);
     void (*ShowIntValueAdress) (int param);
     void (*modifyVariablesAddress) (int dir1, int* dir2, int multiplo );
-
+    //void swap(int* ptr1, int*ptr2)
+    void (*mySwap) (int* ptr1, int*ptr2);
 
 }UTILS;
 
