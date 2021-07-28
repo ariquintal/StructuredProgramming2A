@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-
+char username;
+int age;
+int range = 18;
 
 int main(){
-    char username;
-    int age;
-    int range = 18;
+    
+    
 
     printf("Enter your username:");
     scanf("%s", &username);

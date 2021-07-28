@@ -13,7 +13,6 @@ int main( int argc, char** argv){
     if (i == (argc-1)){
         printf("Average: %f\n", average);
     }
-
     }
 
 
